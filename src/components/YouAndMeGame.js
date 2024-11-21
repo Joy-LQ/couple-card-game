@@ -187,37 +187,40 @@ const YouAndMeGame = () => {
               </button>
             )}
 
-            {currentCard && (
-              <div 
-                onClick={() => !isFlipped && setIsFlipped(true)}
-                className="w-64 h-96 cursor-pointer perspective-1000"
-              >
-                <div className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
-                  <div className={`absolute w-full h-full ${
-                    currentPlayer === 'male' ? 'bg-pink-100' : 'bg-blue-100'
-                  } rounded-xl shadow-xl p-6 backface-hidden`}>
-                    <div className="text-center text-6xl font-bold">
-                      {currentCard.number}
-                    </div>
-                    <div className="absolute bottom-6 left-6">
-                      {getDifficultyHearts(currentCard.difficulty)}
-                    </div>
-                    <div className="absolute bottom-6 right-6">
-                      {currentPlayer === 'male' ? '♀' : '♂'}
-                    </div>
-                  </div>
-                  <div className="absolute w-full h-full bg-white rounded-xl shadow-xl p-6 backface-hidden rotate-y-180">
-                    <div className="text-right text-2xl">{currentCard.number}</div>
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full px-4">
-                      {currentCard.content}
-                    </div>
-                    <div className="absolute bottom-6 left-6">
-                      {getDifficultyHearts(currentCard.difficulty)}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
+{currentCard && (
+  <div 
+    onClick={() => !isFlipped && setIsFlipped(true)}
+    className="w-64 h-96 cursor-pointer perspective-1000"
+  >
+    <div className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
+      {/* 卡牌背面（数字） */}
+      <div className={`absolute w-full h-full ${
+        currentPlayer === 'male' ? 'bg-pink-100' : 'bg-blue-100'
+      } rounded-xl shadow-xl p-6 backface-hidden`}>
+        <div className="text-center text-6xl font-bold">
+          {currentCard.number}
+        </div>
+        <div className="absolute bottom-6 left-6">
+          {getDifficultyHearts(currentCard.difficulty)}
+        </div>
+        <div className="absolute bottom-6 right-6">
+          {currentPlayer === 'male' ? '♀' : '♂'}
+        </div>
+      </div>
+
+      {/* 卡牌正面（任务内容） */}
+      <div className="absolute w-full h-full bg-white rounded-xl shadow-xl p-6 backface-hidden rotate-y-180">
+        <div className="text-center text-xl font-bold mb-4">任务内容</div>
+        <div className="text-center text-lg">
+          {currentCard.content}
+        </div>
+        <div className="absolute bottom-6 left-6">
+          {getDifficultyHearts(currentCard.difficulty)}
+        </div>
+      </div>
+    </div>
+  </div>
+)}
 
             {isFlipped && currentCard && (
               <div className="flex gap-4 mt-4">
