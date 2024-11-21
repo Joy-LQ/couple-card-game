@@ -188,72 +188,70 @@ const YouAndMeGame = () => {
             )}
 
 {currentCard && (
-  <div 
-    onClick={() => !isFlipped && setIsFlipped(true)}
-    className="w-64 h-96 cursor-pointer perspective-1000"
-  >
-    <div className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
-      {/* 卡牌背面（数字） */}
-      <div className={`absolute w-full h-full ${
-        currentPlayer === 'male' ? 'bg-pink-100' : 'bg-blue-100'
-      } rounded-xl shadow-xl p-6 backface-hidden`}>
-        <div className="text-center text-6xl font-bold">
-          {currentCard.number}
+  <div className="flex flex-col items-center gap-4 relative">
+    <div 
+      onClick={() => !isFlipped && setIsFlipped(true)}
+      className="w-64 h-96 cursor-pointer perspective-1000"
+    >
+      <div className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
+        {/* 卡牌背面（数字） */}
+        <div className={`absolute w-full h-full ${
+          currentPlayer === 'male' ? 'bg-pink-100' : 'bg-blue-100'
+        } rounded-xl shadow-xl p-6 backface-hidden`}>
+          <div className="text-center text-6xl font-bold">
+            {currentCard.number}
+          </div>
+          <div className="absolute bottom-6 left-6">
+            {getDifficultyHearts(currentCard.difficulty)}
+          </div>
+          <div className="absolute bottom-6 right-6">
+            {currentPlayer === 'male' ? '♀' : '♂'}
+          </div>
         </div>
-        <div className="absolute bottom-6 left-6">
-          {getDifficultyHearts(currentCard.difficulty)}
-        </div>
-        <div className="absolute bottom-6 right-6">
-          {currentPlayer === 'male' ? '♀' : '♂'}
-        </div>
-      </div>
 
-      {/* 卡牌正面（任务内容） */}
-      <div className="absolute w-full h-full bg-white rounded-xl shadow-xl p-6 backface-hidden rotate-y-180">
-        <div className="text-center text-xl font-bold mb-4">任务内容</div>
-        <div className="text-center text-lg">
-          {currentCard.content}
-        </div>
-        <div className="absolute bottom-6 left-6">
-          {getDifficultyHearts(currentCard.difficulty)}
+        {/* 卡牌正面（任务内容） */}
+        <div className="absolute w-full h-full bg-white rounded-xl shadow-xl p-6 backface-hidden rotate-y-180">
+          <div className="text-center text-xl font-bold mb-4">任务内容</div>
+          <div className="text-center text-lg px-4">
+            {currentCard.content}
+          </div>
+          <div className="absolute bottom-6 left-6">
+            {getDifficultyHearts(currentCard.difficulty)}
+          </div>
         </div>
       </div>
     </div>
+
+    {isFlipped && (
+      <div className="flex gap-4 mt-4">
+        <button
+          onClick={() => handleVeto('male')}
+          disabled={vetoCount.male === 0}
+          className={`px-4 py-2 rounded ${
+            vetoCount.male > 0 ? 'bg-red-500 hover:bg-red-600 text-white' : 'bg-gray-300'
+          }`}
+        >
+          男生否决 ({vetoCount.male})
+        </button>
+        <button
+          onClick={handleCompleteTask}
+          className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+        >
+          完成任务
+        </button>
+        <button
+          onClick={() => handleVeto('female')}
+          disabled={vetoCount.female === 0}
+          className={`px-4 py-2 rounded ${
+            vetoCount.female > 0 ? 'bg-red-500 hover:bg-red-600 text-white' : 'bg-gray-300'
+          }`}
+        >
+          女生否决 ({vetoCount.female})
+        </button>
+      </div>
+    )}
   </div>
 )}
-
-            {isFlipped && currentCard && (
-              <div className="flex gap-4 mt-4">
-                <button
-                  onClick={() => handleVeto('male')}
-                  disabled={vetoCount.male === 0}
-                  className={`px-4 py-2 rounded ${
-                    vetoCount.male > 0 ? 'bg-red-500 hover:bg-red-600 text-white' : 'bg-gray-300'
-                  }`}
-                >
-                  男生否决 ({vetoCount.male})
-                </button>
-                <button
-                  onClick={handleCompleteTask}
-                  className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
-                >
-                  完成任务
-                </button>
-                <button
-                  onClick={() => handleVeto('female')}
-                  disabled={vetoCount.female === 0}
-                  className={`px-4 py-2 rounded ${
-                    vetoCount.female > 0 ? 'bg-red-500 hover:bg-red-600 text-white' : 'bg-gray-300'
-                  }`}
-                >
-                  女生否决 ({vetoCount.female})
-                </button>
-              </div>
-            )}
-          </div>
-        )}
-      </div>
-
       <button
         onClick={() => setShowRules(true)}
         className="absolute bottom-4 left-4 flex items-center gap-2 px-4 py-2 bg-gray-500 text-white rounded-full hover:bg-gray-600"
