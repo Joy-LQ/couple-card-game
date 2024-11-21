@@ -2,50 +2,18 @@ import React, { useState } from 'react';
 import { Shuffle, RotateCcw, Heart, HelpCircle, X } from 'lucide-react';
 
 const defaultCards = {
-  male: [
-    // 男生简单任务 (难度 1)
-    { id: 1, number: 1, content: "对着对方说三句甜言蜜语", difficulty: 1 },
-    { id: 2, number: 2, content: "给对方一个温暖的拥抱", difficulty: 1 },
-    { id: 3, number: 3, content: "用最甜蜜的语气叫对方一声宝贝", difficulty: 1 },
-    { id: 4, number: 4, content: "说说和对方的第一次见面", difficulty: 1 },
-    { id: 5, number: 5, content: "告诉对方今天的妆容/穿搭很好看", difficulty: 1 },
-    
-    // 男生中等任务 (难度 2)
-    { id: 6, number: 6, content: "给对方唱一首最近很喜欢的歌", difficulty: 2 },
-    { id: 7, number: 7, content: "展示手机里为对方单独存的照片", difficulty: 2 },
-    { id: 8, number: 8, content: "说出三个最喜欢对方的理由", difficulty: 2 },
-    { id: 9, number: 9, content: "学对方说话的语气和习惯动作", difficulty: 2 },
-    { id: 10, number: 10, content: "和对方玩一分钟的互相对视", difficulty: 2 },
-    
-    // 男生困难任务 (难度 3)
-    { id: 11, number: 11, content: "即兴创作一首情诗给对方", difficulty: 3 },
-    { id: 12, number: 12, content: "模仿第一次向对方表白的场景", difficulty: 3 },
-    { id: 13, number: 13, content: "给对方一个公主抱", difficulty: 3 },
-    { id: 14, number: 14, content: "给对方按摩肩膀三分钟", difficulty: 3 },
-    { id: 15, number: 15, content: "背着对方走完一首歌的时间", difficulty: 3 },
-  ],
-  female: [
-    // 女生简单任务 (难度 1)
-    { id: 1, number: 1, content: "对着对方撒个娇", difficulty: 1 },
-    { id: 2, number: 2, content: "亲一下对方的脸颊", difficulty: 1 },
-    { id: 3, number: 3, content: "用最可爱的表情说'我爱你'", difficulty: 1 },
-    { id: 4, number: 4, content: "说说对方最近做的暖心的事", difficulty: 1 },
-    { id: 5, number: 5, content: "夸夸对方今天的造型", difficulty: 1 },
-    
-    // 女生中等任务 (难度 2)
-    { id: 6, number: 6, content: "跳一段最近很火的舞蹈", difficulty: 2 },
-    { id: 7, number: 7, content: "分享一个只告诉对方的小秘密", difficulty: 2 },
-    { id: 8, number: 8, content: "模仿对方的一个小习惯", difficulty: 2 },
-    { id: 9, number: 9, content: "用一句话概括对方的优点", difficulty: 2 },
-    { id: 10, number: 10, content: "闭着眼睛画出对方的样子", difficulty: 2 },
-    
-    // 女生困难任务 (难度 3)
-    { id: 11, number: 11, content: "给对方化一个可爱的妆", difficulty: 3 },
-    { id: 12, number: 12, content: "即兴编一个关于对方的小故事", difficulty: 3 },
-    { id: 13, number: 13, content: "用行动展示最浪漫的事", difficulty: 3 },
-    { id: 14, number: 14, content: "喂对方吃一顿饭", difficulty: 3 },
-    { id: 15, number: 15, content: "为对方跳一支即兴舞蹈", difficulty: 3 },
-  ]
+  male: Array(50).fill(null).map((_, i) => ({
+    id: i + 1,
+    number: i + 1,
+    content: `示例男生任务 ${i + 1}`,
+    difficulty: Math.floor(Math.random() * 3) + 1
+  })),
+  female: Array(50).fill(null).map((_, i) => ({
+    id: i + 1,
+    number: i + 1,
+    content: `示例女生任务 ${i + 1}`,
+    difficulty: Math.floor(Math.random() * 3) + 1
+  }))
 };
 
 const YouAndMeGame = () => {
