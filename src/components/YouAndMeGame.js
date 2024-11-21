@@ -1,8 +1,21 @@
+import { Shuffle, RotateCcw, Heart, HelpCircle, X, Lock } from 'lucide-react';
 import React, { useState } from 'react';
 import { Shuffle, RotateCcw, Heart, HelpCircle, X } from 'lucide-react';
 
+const GAME_PASSWORD = "lovegame2024"; // 你可以修改这个密码为你想要的
+
 // 游戏卡牌数据
-const defaultCards = {
+const YouAndMeGame = () => {
+  // 添加密码相关的状态
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState('');
+  const [passwordError, setPasswordError] = useState(false);
+
+  // 原有的状态保持不变
+  const [gameState, setGameState] = useState('initial');
+  // ... 其他状态 ...
+
+  const YouAndMeGame = () => {
   male: [
     { id: 1, number: 1, content: "对着对方说三句甜言蜜语", difficulty: 1 },
     { id: 2, number: 2, content: "给对方一个温暖的拥抱", difficulty: 1 },
@@ -18,6 +31,17 @@ const defaultCards = {
     { id: 5, number: 5, content: "夸夸对方今天的造型", difficulty: 1 },
   ]
 };
+
+// 添加密码验证函数
+  const handlePasswordSubmit = (e) => {
+    e.preventDefault();
+    if (password === GAME_PASSWORD) {
+      setIsAuthenticated(true);
+      setPasswordError(false);
+    } else {
+      setPasswordError(true);
+    }
+  };
 
 const YouAndMeGame = () => {
   const [gameState, setGameState] = useState('initial');
@@ -106,6 +130,48 @@ const YouAndMeGame = () => {
     return Array(difficulty).fill('❤️').join('');
   };
 
+// 如果未认证，显示密码输入界面
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-pink-50 p-4 flex flex-col items-center justify-center">
+        <h1 className="text-4xl font-bold text-pink-600 mb-8">You & Me</h1>
+        <div className="bg-white p-8 rounded-xl shadow-md max-w-md w-full">
+          <div className="flex items-center justify-center mb-6">
+            <Lock className="w-12 h-12 text-pink-500" />
+          </div>
+          <form onSubmit={handlePasswordSubmit} className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                请输入密码进入游戏
+              </label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
+                placeholder="输入密码..."
+              />
+            </div>
+            {passwordError && (
+              <p className="text-red-500 text-sm">密码错误，请重试</p>
+            )}
+            <button
+              type="submit"
+              className="w-full bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-600 transition-colors"
+            >
+              进入游戏
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
+
+  // 原有的返回语句保持不变
+  return (
+    <div className="min-h-screen bg-pink-50 p-4 flex flex-col items-center justify-center">
+    // ... 原有的游戏界面代码 ...
+  
   return (
     <div className="min-h-screen bg-pink-50 p-4 flex flex-col items-center justify-center">
       <h1 className="text-4xl font-bold text-pink-600 mb-8">You & Me</h1>
