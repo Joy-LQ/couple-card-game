@@ -5,11 +5,11 @@ const GAME_PASSWORD = "lovegame2024";
 
 const defaultCards = {
   male: [
-    { id: 1, number: 1, content: "Blindfold your lover with a scarf and sit them in an armchair, with their breasts exposed. Massage their shoulders, moving your hands down onto their breast area from time to time", difficulty: 1 },
-    { id: 2, number: 2, content: "With your lover standing in their lingerie, start at their ankles and kiss all the way up to their mouth. Work your way up slowly", difficulty: 1 },
-    { id: 3, number: 3, content: "Blindfold your lover and use your fingertip to trace the following words on their stomach:'You are gorgeous', 'I find you attractive', and 'I want you'. They have to guess each phrase", difficulty: 1 },
-    { id: 4, number: 4, content: "Kiss your lover roughly: grab their buttocks and pull them towards you, place a finger in their mouth, hold their hair tightly, etc. You can do anything you like", difficulty: 1 },
-    { id: 5, number: 5, content: "Starting from their neck, run your tongue down the length of their spine to the top of their buttocks and back up again", difficulty: 1 },
+    { id: 1, number: 1, content: "用一条丝巾蒙住你爱人的双眼,让他们坐在扶手椅上,上身保持裸露。轻轻按摩他们的肩膀,偶尔将手滑向胸部的部位。", difficulty: 1 },
+    { id: 2, number: 2, content: "让你的爱人穿着内衣立在面前。从脚踝开始,温柔地一路亲吻到达唇边。动作要缓慢,细腻地探索每一寸肌肤。", difficulty: 1 },
+    { id: 3, number: 3, content: "用一条眼罩蒙住你爱人的双眼,用指尖在他们的腹部缓缓描绘出这样的字句:'You are gorgeous', 'I find you attractive', and 'I want you'. 他们需要猜出每一个短语", difficulty: 1 },
+    { id: 4, number: 4, content: "用激烈的亲吻掠夺你爱人的双唇,双手紧捉他们丰满的臀部将他们拉近。尽情挥洒你的爱意和占有欲,让彼此都沉沦在这片刻的狂乱之中。", difficulty: 1 },
+    { id: 5, number: 5, content: "从你爱人的脖颈开始,用温软的舌尖轻轻舔舐,缓缓向下探索至脊背的曲线,最后回到颈部。让你的爱意随着舌尖的游走而泛滥成灾,让彼此都沉浸其中。", difficulty: 1 },
     { id: 6, number: 6, content: "Your lover stands in their lingerie, remove it with your teeth. Your mouth should not touch their body.", difficulty: 2 },
     { id: 7, number: 7, content: "Undress your lover and handcuff them with their hands behind their back. Then take them by the hips and kiss their stomach", difficulty: 2 },
     { id: 8, number: 8, content: "Wearing a blindfold, slide your hands up under your lover's top. Lift up their bra and caress their nipples.", difficulty: 2 },
