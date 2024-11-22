@@ -6,28 +6,38 @@ const GAME_PASSWORD = "lovegame2024"; // 游戏密码
 // 游戏卡牌数据
 const defaultCards = {
   male: [
-    { id: 1, number: 1, content: "对着对方说三句甜言蜜语", difficulty: 1 },
-    { id: 2, number: 2, content: "给对方一个温暖的拥抱", difficulty: 1 },
-    { id: 3, number: 3, content: "用最甜蜜的语气叫对方一声宝贝", difficulty: 1 },
-    { id: 4, number: 4, content: "说说和对方的第一次见面", difficulty: 1 },
-    { id: 5, number: 5, content: "告诉对方今天的妆容/穿搭很好看", difficulty: 1 },
-    { id: 6, number: 6, content: "分享一个你们之间的小秘密", difficulty: 2 },
-    { id: 7, number: 7, content: "即兴为对方唱一首歌", difficulty: 2 },
-    { id: 8, number: 8, content: "用夸张的表情说'我超级爱你'", difficulty: 2 },
-    { id: 9, number: 9, content: "说出对方最吸引你的三个特点", difficulty: 2 },
-    { id: 10, number: 10, content: "描述你心中对方最美的样子", difficulty: 2 }
-  ],
+    { id: 1, number: 1, content: "Blindfold your lover with a scarf and sit them in an armchair, with their breasts exposed. Massage their shoulders, moving your hands down onto their breast area from time to time", difficulty: 1 },
+    { id: 2, number: 2, content: "With your lover standing in their lingerie, start at their ankles and kiss all the way up to their mouth. Work your way up slowly", difficulty: 1 },
+    { id: 3, number: 3, content: "Blindfold your lover and use your fingertip to trace the following words on their stomach:"You are gorgeous", "I find you attractive", and "I want you". They have to guess each phrase", difficulty: 1 },
+    { id: 4, number: 4, content: "Kiss your lover roughly: grab their buttocks and pull them towards you, place a finger in their mouth, hold their hair tightly, etc. You can do anything you like", difficulty: 1 },
+    { id: 5, number: 5, content: "Starting from their neck, run your tongue down the length of their spine to the top of their buttocks and back up again", difficulty: 1 },
+    { id: 6, number: 6, content: "Your lover stands in their lingerie, remove it with your teeth. Your mouth should not touch their body.", difficulty: 2 },
+    { id: 7, number: 7, content: "Undress your lover and handcuff them with their hands behind their back. Then take them by the hips and kiss their stomach", difficulty: 2 },
+    { id: 8, number: 8, content: "Wearing a blindfold, slide your hands up under your lover's top. Lift up their bra and caress their nipples.'", difficulty: 2 },
+    { id: 9, number: 9, content: "Expose your lover's breasts and sit them down facing you. Lick their breasts like an ice cream melting in the sun", difficulty: 2 },
+    { id: 10, number: 10, content: "Expose your lover's buttocks and put them over your knee, with them facing down. Pour oil over them and massage them sensuously", difficulty: 2 }
+    { id: 11, number: 11, content: "Expose your partner's breasts and sit them down facing you. Look them in the eye as you pinch and twist their nipples (as if turning on a tap). Let them stop you when the pain becomes unbearable. and don't go beyound that.", difficulty: 3 }
+    { id: 12, number: 12, content: "Bathe and massage your lover's feet, then suck their toes one by one and sensously lick the arch of their foot.", difficulty: 3 }
+    { id: 13, number: 13, content: "Remove your lover's knickers and suck their clitoris, if they ask for more gently begin to nibble.", difficulty: 3 }
+    { id: 14, number: 14, content: "Remove your lover's knickers and take their labia between your fingers. Trace along the length of them but don't touch anywhere else.", difficulty: 3 }
+    { id: 15, number: 15, content: "Take your lover by the hair to keep their head still, so they have to look you in the eye. Slip your other hand inside their knickers. Put your fingers inside them 10 times- no more, no less- counting out loud.", difficulty: 3 }
+],
   female: [
-    { id: 1, number: 1, content: "对着对方撒个娇", difficulty: 1 },
-    { id: 2, number: 2, content: "亲一下对方的脸颊", difficulty: 1 },
-    { id: 3, number: 3, content: "用最可爱的表情说'我爱你'", difficulty: 1 },
-    { id: 4, number: 4, content: "说说对方最近做的暖心的事", difficulty: 1 },
-    { id: 5, number: 5, content: "夸夸对方今天的造型", difficulty: 1 },
-    { id: 6, number: 6, content: "模仿对方的一个小动作", difficulty: 2 },
-    { id: 7, number: 7, content: "说出你最难忘的一次约会", difficulty: 2 },
-    { id: 8, number: 8, content: "给对方一个公主抱", difficulty: 2 },
-    { id: 9, number: 9, content: "说说第一次心动的瞬间", difficulty: 2 },
-    { id: 10, number: 10, content: "用夸张的动作表达爱意", difficulty: 2 }
+    { id: 1, number: 1, content: "Blindfold your lover and kiss their neck, nibbl their earlobes from time to time", difficulty: 1 },
+    { id: 2, number: 2, content: "Blindfold your lover and suck their fingers greedly", difficulty: 1 },
+    { id: 3, number: 3, content: "Tie your lover's hands behind their back and kiss their upper body.'", difficulty: 1 },
+    { id: 4, number: 4, content: "Tie a tie around your lover's neck, pull hard on it to draw them towards you, and kiss them passionately", difficulty: 1 },
+    { id: 5, number: 5, content: "Kiss your lover passionately, slipping your tongue into their mouth. Such and nibble their lips", difficulty: 1 },
+    { id: 6, number: 6, content: "Improvise the following erotic scenario: you work as the PA to a charismatic chief executive who is something of a Casanova, and you are really into him. He is willing, so seduce him.", difficulty: 2 },
+    { id: 7, number: 7, content: "Blindfold your lover and blow on their privates. Your are not allowed to touch them", difficulty: 2 },
+    { id: 8, number: 8, content: "Blindfold your lover and get undressed right next to them. Pleasure yourself close to their face, their mouth or their ear- the choice is yours", difficulty: 2 },
+    { id: 9, number: 9, content: "Take your lover's balls in your hands and massage them gently, intermittently giving them a slight tug", difficulty: 2 },
+    { id: 10, number: 10, content: "Perform a strip-tease for your lover and toss your clothes seductively at them.", difficulty: 2 }
+    { id: 11, number: 11, content: "With both of you clothed, simulate vigorous, athletic doggy-style sex with your partner bent over a tabel. Spice things up with domination, taking dirty and spanking him", difficulty: 3 }
+    { id: 12, number: 12, content: "Cover your lover's most sensitive parts in a spread or liquid that your like (such as jam or chocolate) and lick it off. Do this several times", difficulty: 3 }
+    { id: 13, number: 13, content: "Wash your lover's member sensually then lick and tease it with your tougue. Finish by taking them deep into your mouth while rubbing his balls", difficulty: 3 }
+    { id: 14, number: 14, content: "Suck your lover's balls and take their member in your hands for a sensual massage", difficulty: 3 }
+    { id: 15, number: 15, content: "Sitting on a chair, let your lover tie your hands behind your back. Your lover brings their pelvis towards your mouth. Lick and kiss whatever comes near enough.", difficulty: 3 }
   ]
 };
 
