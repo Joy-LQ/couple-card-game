@@ -324,15 +324,6 @@ const YouAndMeGame = () => {
     >
       男生否决 ({vetoCount.male})
     </button>
-<button
-                      onClick={() => handleVeto('male')}
-                      disabled={vetoCount.male === 0}
-                      className={`px-4 py-2 rounded ${
-                        vetoCount.male > 0 ? 'bg-red-500 hover:bg-red-600 text-white' : 'bg-gray-300'
-                      }`}
-                    >
-                      男生否决 ({vetoCount.male})
-                    </button>
                     <button
                       onClick={handleCompleteTask}
                       className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
