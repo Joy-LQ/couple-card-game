@@ -8,12 +8,12 @@ const defaultCards = {
   male: [
     { id: 1, number: 1, content: "Blindfold your lover with a scarf and sit them in an armchair, with their breasts exposed. Massage their shoulders, moving your hands down onto their breast area from time to time", difficulty: 1 },
     { id: 2, number: 2, content: "With your lover standing in their lingerie, start at their ankles and kiss all the way up to their mouth. Work your way up slowly", difficulty: 1 },
-    { id: 3, number: 3, content: "Blindfold your lover and use your fingertip to trace the following words on their stomach:"You are gorgeous", "I find you attractive", and "I want you". They have to guess each phrase", difficulty: 1 },
+    { id: 3, number: 3, content: "Blindfold your lover and use your fingertip to trace the following words on their stomach:‘You are gorgeous’, ‘I find you attractive’, and ‘I want you’. They have to guess each phrase", difficulty: 1 },
     { id: 4, number: 4, content: "Kiss your lover roughly: grab their buttocks and pull them towards you, place a finger in their mouth, hold their hair tightly, etc. You can do anything you like", difficulty: 1 },
     { id: 5, number: 5, content: "Starting from their neck, run your tongue down the length of their spine to the top of their buttocks and back up again", difficulty: 1 },
     { id: 6, number: 6, content: "Your lover stands in their lingerie, remove it with your teeth. Your mouth should not touch their body.", difficulty: 2 },
     { id: 7, number: 7, content: "Undress your lover and handcuff them with their hands behind their back. Then take them by the hips and kiss their stomach", difficulty: 2 },
-    { id: 8, number: 8, content: "Wearing a blindfold, slide your hands up under your lover's top. Lift up their bra and caress their nipples.'", difficulty: 2 },
+    { id: 8, number: 8, content: "Wearing a blindfold, slide your hands up under your lover's top. Lift up their bra and caress their nipples.", difficulty: 2 },
     { id: 9, number: 9, content: "Expose your lover's breasts and sit them down facing you. Lick their breasts like an ice cream melting in the sun", difficulty: 2 },
     { id: 10, number: 10, content: "Expose your lover's buttocks and put them over your knee, with them facing down. Pour oil over them and massage them sensuously", difficulty: 2 }
     { id: 11, number: 11, content: "Expose your partner's breasts and sit them down facing you. Look them in the eye as you pinch and twist their nipples (as if turning on a tap). Let them stop you when the pain becomes unbearable. and don't go beyound that.", difficulty: 3 }
@@ -25,7 +25,7 @@ const defaultCards = {
   female: [
     { id: 1, number: 1, content: "Blindfold your lover and kiss their neck, nibbl their earlobes from time to time", difficulty: 1 },
     { id: 2, number: 2, content: "Blindfold your lover and suck their fingers greedly", difficulty: 1 },
-    { id: 3, number: 3, content: "Tie your lover's hands behind their back and kiss their upper body.'", difficulty: 1 },
+    { id: 3, number: 3, content: "Tie your lover's hands behind their back and kiss their upper body.", difficulty: 1 },
     { id: 4, number: 4, content: "Tie a tie around your lover's neck, pull hard on it to draw them towards you, and kiss them passionately", difficulty: 1 },
     { id: 5, number: 5, content: "Kiss your lover passionately, slipping your tongue into their mouth. Such and nibble their lips", difficulty: 1 },
     { id: 6, number: 6, content: "Improvise the following erotic scenario: you work as the PA to a charismatic chief executive who is something of a Casanova, and you are really into him. He is willing, so seduce him.", difficulty: 2 },
