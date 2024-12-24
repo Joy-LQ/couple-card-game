@@ -18,7 +18,7 @@ const defaultCards = {
     { id: 4, number: 4, content: "说说对方最近做的暖心的事", difficulty: 1 },
     { id: 5, number: 5, content: "夸夸对方今天的造型", difficulty: 1 }
   ]
-};
+}
 // Rest of the component code remains the same...
 
 const YouAndMeGame = () => {
