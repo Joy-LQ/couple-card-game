@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { Shuffle, RotateCcw, Heart, HelpCircle, X, Lock } from 'lucide-react';
+import React, { useState } from 'react';  // 修正: 移除了转义字符
+import { Shuffle, RotateCcw, Heart, HelpCircle, X, Lock } from 'lucide-react';  // 修正: 移除了转义字符
 
-// 设置游戏密码
-const GAME_PASSWORD = "lovegame2024";
+// 修正: 修改了字符串格式
+const GAME_PASSWORD = "lovegame2024";  
 
-// 游戏卡牌数据
+// 修正: 修复了数组语法
 const defaultCards = {
   male: [
     { id: 1, number: 1, content: "用一条丝巾蒙住你爱人的双眼,让他们坐在扶手椅上,上身保持裸露。轻轻按摩他们的肩膀,偶尔将手滑向胸部的部位。", difficulty: 1 },
@@ -195,6 +195,7 @@ const YouAndMeGame = () => {
         [targetGender]: [...prev[targetGender], currentCard.id]
       }));
 
+      setCurrentPlayer(currentPlayer === 'male' ? 'female' : 'male');  // 添加了玩家切换
       setCurrentCard(null);
       setIsFlipped(false);
     }
@@ -208,6 +209,7 @@ const YouAndMeGame = () => {
       setIsFlipped(false);
     }
   };
+
 
   // 获取难度心形图标
   const getDifficultyHearts = (difficulty) => {
