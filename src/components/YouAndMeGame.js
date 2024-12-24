@@ -1,10 +1,8 @@
-import React, { useState } from 'react';  // 修正: 移除了转义字符
-import { Shuffle, RotateCcw, Heart, HelpCircle, X, Lock } from 'lucide-react';  // 修正: 移除了转义字符
+import React, { useState } from 'react';
+import { Shuffle, RotateCcw, Heart, HelpCircle, X, Lock } from 'lucide-react';
 
-// 修正: 修改了字符串格式
-const GAME_PASSWORD = "lovegame2024";  
+const GAME_PASSWORD = "lovegame2024";
 
-// 修正: 修复了数组语法
 const defaultCards = {
   male: [
     { id: 1, number: 1, content: "用一条丝巾蒙住你爱人的双眼,让他们坐在扶手椅上,上身保持裸露。轻轻按摩他们的肩膀,偶尔将手滑向胸部的部位。", difficulty: 1 },
@@ -103,12 +101,10 @@ female: [
 // Rest of the component code remains the same...
 
 const YouAndMeGame = () => {
-  // 密码相关状态
+  // 状态定义
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState(false);
-
-  // 游戏相关状态
   const [gameState, setGameState] = useState('initial');
   const [currentTurn, setCurrentTurn] = useState(null);
   const [currentPlayer, setCurrentPlayer] = useState(null);
@@ -119,7 +115,7 @@ const YouAndMeGame = () => {
   const [showRules, setShowRules] = useState(false);
   const [usedCards, setUsedCards] = useState({ male: [], female: [] });
 
-  // 密码验证函数
+  // 函数定义
   const handlePasswordSubmit = (e) => {
     e.preventDefault();
     if (password === GAME_PASSWORD) {
@@ -130,7 +126,6 @@ const YouAndMeGame = () => {
     }
   };
 
-  // 游戏重置函数
   const resetGame = () => {
     setGameState('initial');
     setCurrentTurn(null);
@@ -142,14 +137,12 @@ const YouAndMeGame = () => {
     setUsedCards({ male: [], female: [] });
   };
 
-  // 开始游戏
   const handleStart = () => {
     const turn = ['you', 'me', '?'][Math.floor(Math.random() * 3)];
     setCurrentTurn(turn);
     setGameState('turn-select');
   };
 
-  // 处理回合结果
   const handleTurnResult = () => {
     if (currentTurn === 'me') {
       setGameState('gender-select');
@@ -158,18 +151,15 @@ const YouAndMeGame = () => {
     }
   };
 
-  // 选择性别
   const handleGenderSelect = (gender) => {
     setCurrentPlayer(gender);
     setGameState('playing');
   };
 
-  // 获取可用卡牌
   const getAvailableCards = (gender) => {
     return defaultCards[gender].filter(card => !usedCards[gender].includes(card.id));
   };
 
-  // 抽取卡牌
   const handleDrawCard = () => {
     const targetGender = currentPlayer === 'male' ? 'female' : 'male';
     const availableCards = getAvailableCards(targetGender);
@@ -180,7 +170,6 @@ const YouAndMeGame = () => {
     }
   };
 
-  // 完成任务
   const handleCompleteTask = () => {
     if (currentCard) {
       const scorer = currentPlayer;
@@ -195,13 +184,12 @@ const YouAndMeGame = () => {
         [targetGender]: [...prev[targetGender], currentCard.id]
       }));
 
-      setCurrentPlayer(currentPlayer === 'male' ? 'female' : 'male');  // 添加了玩家切换
+      setCurrentPlayer(currentPlayer === 'male' ? 'female' : 'male');
       setCurrentCard(null);
       setIsFlipped(false);
     }
   };
 
-  // 否决
   const handleVeto = (gender) => {
     if (vetoCount[gender] > 0) {
       setVetoCount(prev => ({ ...prev, [gender]: prev[gender] - 1 }));
@@ -210,13 +198,11 @@ const YouAndMeGame = () => {
     }
   };
 
-
-  // 获取难度心形图标
   const getDifficultyHearts = (difficulty) => {
     return Array(difficulty).fill('❤️').join('');
   };
 
-  // 如果未认证，显示密码输入界面
+  // 密码验证界面
   if (!isAuthenticated) {
     return (
       <div className="min-h-screen bg-pink-50 p-4 flex flex-col items-center justify-center">
@@ -304,7 +290,7 @@ const YouAndMeGame = () => {
           </div>
         )}
 
-        {/* 性别选择 */}
+{/* 性别选择 */}
         {gameState === 'gender-select' && (
           <div className="text-center">
             <div className="text-xl mb-4">请选择性别:</div>
@@ -348,7 +334,7 @@ const YouAndMeGame = () => {
                   className="w-64 h-96 cursor-pointer"
                   style={{ perspective: "1000px" }}
                 >
-                  <div className={`relative w-full h-full transition-all duration-500`}
+                  <div className="relative w-full h-full transition-all duration-500"
                        style={{ 
                          transformStyle: "preserve-3d",
                          transform: isFlipped ? "rotateY(180deg)" : ""
@@ -368,7 +354,6 @@ const YouAndMeGame = () => {
                         {currentPlayer === 'male' ? '♀' : '♂'}
                       </div>
                     </div>
-
                     {/* 卡牌正面 */}
                     <div className="absolute w-full h-full bg-white rounded-xl shadow-xl p-6"
                          style={{ 
@@ -393,10 +378,10 @@ const YouAndMeGame = () => {
                       disabled={vetoCount.male === 0}
                       className={`px-4 py-2 rounded ${
                         vetoCount.male > 0 ? 'bg-red-500 hover:bg-red-600 text-white' : 'bg-gray-300'
-      }`}
-    >
-      男生否决 ({vetoCount.male})
-    </button>
+                      }`}
+                    >
+                      男生否决 ({vetoCount.male})
+                    </button>
                     <button
                       onClick={handleCompleteTask}
                       className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
@@ -444,7 +429,7 @@ const YouAndMeGame = () => {
               <li>游戏开始时随机抽取先手玩家</li>
               <li>抽到"我"时需要选择性别</li>
               <li>轮流抽取对方的卡牌并完成任务</li>
-              <li>每张卡牌都有1-3颗心的难度等级</li>
+              <li>每张卡牌都有1颗心的难度等级</li>
               <li>完成任务后获得对应难度的分数</li>
               <li>每个人有1次否决对方任务的机会</li>
               <li>已完成的卡牌不会再次出现</li>
@@ -455,5 +440,3 @@ const YouAndMeGame = () => {
     </div>
   );
 };
-
-export default YouAndMeGame;
