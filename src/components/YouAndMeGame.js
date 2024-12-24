@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const GAME_PASSWORD = "lovegame2024";
 
 const defaultCards = {
-  male: [
+male: [
     { id: 1, number: 1, content: "用一条丝巾蒙住你爱人的双眼,让他们坐在扶手椅上,上身保持裸露。轻轻按摩他们的肩膀,偶尔将手滑向胸部的部位。", difficulty: 1 },
     { id: 2, number: 2, content: "让你的爱人穿着内衣立在面前。从脚踝开始,温柔地一路亲吻到达唇边。动作要缓慢,细腻地探索每一寸肌肤。", difficulty: 1 },
     { id: 3, number: 3, content: "用一条眼罩蒙住你爱人的双眼,用指尖在他们的腹部缓缓描绘出这样的字句:'You are gorgeous', 'I find you attractive', and 'I want you'. 他们需要猜出每一个短语", difficulty: 1 },
@@ -13,13 +13,42 @@ const defaultCards = {
     { id: 6, number: 6, content: "你的爱人正穿着内衣站在你面前。用你灵活的双唇,轻轻咬住她的衣衫边缘,慢慢脱下它,却不能让你的嘴唇接触到她的肌肤。在这个过程中,你们的视线都紧紧交织在一起。", difficulty: 2 },
     { id: 7, number: 7, content: "温柔地为你的爱人解开衣衫,双手接过他们的手腕,轻轻地将他们的双手交叠在身后。然后,用你温暖的双唇,在他们的腹部印下一串柔软的亲吻。让你的爱意透过每一个吻烙印在他们的肌肤上。", difficulty: 2 },
     { id: 8, number: 8, content: "为你的爱人蒙上柔软的眼罩,双手轻轻探入他们的衣襟之中。小心翼翼地解开他们的内衣,用指尖轻抚他们敏感的肌肤,描绘出每一处曲线。让你的爱意透过指尖传递到他们的身心。", difficulty: 2 },
-    { id: 9, number: 9, content: "Expose your lover's breasts and sit them down facing you. Lick their breasts like an ice cream melting in the sun", difficulty: 2 },
-    { id: 10, number: 10, content: "Expose your lover's buttocks and put them over your knee, with them facing down. Pour oil over them and massage them sensuously", difficulty: 2 },
-    { id: 11, number: 11, content: "Expose your partner's breasts and sit them down facing you. Look them in the eye as you pinch and twist their nipples (as if turning on a tap). Let them stop you when the pain becomes unbearable. and don't go beyound that.", difficulty: 3 },
-    { id: 12, number: 12, content: "Bathe and massage your lover's feet, then suck their toes one by one and sensously lick the arch of their foot.", difficulty: 3 },
-    { id: 13, number: 13, content: "Remove your lover's knickers and suck their clitoris, if they ask for more gently begin to nibble.", difficulty: 3 },
-    { id: 14, number: 14, content: "Remove your lover's knickers and take their labia between your fingers. Trace along the length of them but don't touch anywhere else.", difficulty: 3 },
-    { id: 15, number: 15, content: "Take your lover by the hair to keep their head still, so they have to look you in the eye. Slip your other hand inside their knickers. Put your fingers inside them 10 times- no more, no less- counting out loud.", difficulty: 3 }
+    { id: 9, number: 9, content: "露出你爱人的乳房，并让它们面向你坐下。舔她们的乳房，就像在阳光下融化的冰淇淋一样。", difficulty: 2 },
+    { id: 10, number: 10, content: "露出爱人的臀部，将其放在膝盖上，面朝下。将油倒在上面并进行感官按摩", difficulty: 2 },
+    { id: 11, number: 11, content: "露出伴侣的乳房，并将其面向您坐下。捏并扭转他们的乳头（就像打开水龙头一样）时，请看着他们的眼睛。当疼痛变得难以忍受时，让他们阻止你。并且不要超出这个范围。", difficulty: 3 },
+    { id: 12, number: 12, content: "给爱人的脚洗澡、按摩，然后一一吸吮他们的脚趾，并用感官舔舐他们的足弓。", difficulty: 3 },
+    { id: 13, number: 13, content: "脱掉你爱人的内裤并吮吸他们的阴蒂，如果他们要求更温柔地开始啃咬。", difficulty: 3 },
+    { id: 14, number: 14, content: "脱掉爱人的内裤，用手指夹住他们的​​阴唇。沿着它们的长度追踪，但不要接触其他任何地方。", difficulty: 3 },
+    { id: 15, number: 15, content: "抓住你爱人的头发，让他们保持头部不动，这样他们就必须看着你的眼睛。将另一只手伸进他们的内裤里。将手指放入其中 10 次——不多也不少——大声数数。", difficulty: 3 }
+    { id: 16, number: 16, content: "当你的爱人穿着内衣时，热情地亲吻他们并抓住他们的臀部。粗暴地握住他们，并将双手滑入他们的臀部之间。在你的伴侣允许的范围内走得尽可能远", difficulty: 3 }
+    { id: 17, number: 17, content: "你们俩都穿好衣服了。与您的伴侣弯腰在桌子上模拟充满活力的后入式性爱。通过把他们弄脏并打屁股来增加趣味性。", difficulty: 3 }
+    { id: 18, number: 18, content: "将手指放入爱人体内，找到他们的 G 点。你的爱人应该引导你，并在你找到它时告诉你。", difficulty: 3 }
+    { id: 19, number: 19, content: "即兴创作以下色情场景：你的爱人假装生病，请医生上门拜访。", difficulty: 3 }
+    { id: 20, number: 20, content: "即兴创作以下色情场景：你是一名警察。对你的爱人进行严格的搜身，尽管他们有负罪感，但仍试图对你甜言蜜语.", difficulty: 3 }
+    { id: 21, number: 21, content: "即兴创作以下色情场景：你是一个自信的仿生人，会不惜一切代价与你的爱人为所欲为。", difficulty: 3 }
+    { id: 22, number: 22, content: "即兴创作以下色情场景：你是一个对观众有好感的脱衣舞娘。为他们奉献出最好的表演", difficulty: 3 }
+    { id: 23, number: 23, content: "你的爱人会给你上一课，告诉你他们喜欢如何被抚摸下面，告诉你该怎么做。练习他向你展示的每个动作", difficulty: 3 }
+    { id: 24, number: 24, content: "面对面，每个人都将一只手放入对方的内衣内。当你们看着对方的眼睛时互相自慰。", difficulty: 3 }
+    { id: 25, number: 25, content: "将爱人的阴蒂含在嘴里，然后将几根手指放入下体。如果他们想让你走得更远，就必须在你的手指上自己上下移动身体.", difficulty: 3 }
+    { id: 26, number: 26, content: "将双手涂上润滑剂，并将一只手放在大腿上，手掌向上。你的伴侣必须脱掉内裤，在你的手上摩擦以取悦自己。", difficulty: 3 }
+    { id: 27, number: 27, content: "感性地清洗爱人最私密的部位。轻轻地拍干并亲吻它们.", difficulty: 3 }
+    { id: 28, number: 28, content: "戴上眼罩，坐在椅子上，让你的爱人将你的双手绑在背后。你的爱人将他们的骨盆靠近你的嘴。舔并亲吻任何靠近的东西.", difficulty: 3 }
+    { id: 29, number: 29, content: "露出你爱人的臀部，将他们放在你的膝盖上，让他们的臀部翘起。抚摸他们的臀部并打他们的屁股。测试他们的疼痛阈值，一旦疼痛变得太严重就停止.", difficulty: 3 }
+    { id: 30, number: 30, content: "咬你爱人的耳朵，对他们说脏话——准确地告诉他们你想对他们做什么。尽你所能！", difficulty: 2 }
+    { id: 31, number: 31, content: "为你的爱人表演脱衣舞表演。用你的衣服爱抚他们的身体，或者戏弄地把衣服扔向他们", difficulty: 2 }
+    { id: 32, number: 32, content: "坐在椅子上，将你的爱人抱在你身上，紧紧抓住他们的骨盆。用他们的胯部摩擦你的胯部并模拟做爱.", difficulty: 2 }
+    { id: 33, number: 33, content: "让你的爱人脸朝下躺在床上，轻轻地、慢慢地将指甲滑过他    们裸露的腿的背面.", difficulty: 2 }
+    { id: 34, number: 34, content: "让你的爱人穿上衣服，弯腰在桌子上，抓住他们的头发，然后在你负责的地方模拟运动狗狗式性爱。", difficulty: 2 }
+    { id: 35, number: 35, content: "戴上眼罩。你的爱人握住你的手，用它们来爱抚自己。关注他们所做的每一个动作并记住它们以供下次使用", difficulty: 2 }
+    { id: 36, number: 36, content: "不使用舌头对你的爱人进行口交。只需用你的嘴捂住他们的内衣.", difficulty: 2 }
+    { id: 37, number: 37, content: "用你的嘴抚摸爱人臀部的曲线。这样做 10 次。如果你愿意，就用你的舌头，保持有趣，并按照你的爱人的意愿走多远.", difficulty: 3 }
+    { id: 38, number: 38, content: "蒙住你爱人的眼睛，在他们赤裸的大腿内侧弹琴（音乐由你决定），非常接近但不接触他们的私密区域", difficulty: 2 }
+    { id: 39, number: 39, content: "蒙住爱人的眼睛，隔着衣服抚摸他们。时不时地将几根手指滑入他们的内裤中。您不得将任何手指放入阴部.", difficulty: 2 }
+    { id: 40, number: 40, content: "蒙住你爱人的眼睛，并在他们的乳房上进行感官刺激.", 注意爱人的脖子和耳朵。给他们一些温柔的爱咬（谨慎或其他方式）并吮吸他们的耳垂.", difficulty: 2 }
+    { id: 41, number: 41, content: "用你的大腿，隔着爱人的衣服摩擦他们的胯部。尝试不同的压力和动作.", difficulty: 2 }
+    { id: 42, number: 42, content: "用手指在爱人的大腿上和内裤上上下滑动。不允许您进行任何其他类型的移动", difficulty: 2 }
+    { id: 43, number: 43, content: "将手指滑过她们的内裤腰带，靠近但不要触及她们最脆弱的区域。", difficulty: 2 }
+    { id: 44, number: 44, content: "当你的爱人穿着内衣时，将你的手指滑入内衣下，敏感地抚摸他们的臀部", difficulty: 2 }
   ],
   female: [
     { id: 1, number: 1, content: "Blindfold your lover and kiss their neck, nibbl their earlobes from time to time", difficulty: 1 },
