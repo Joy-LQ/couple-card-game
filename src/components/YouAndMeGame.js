@@ -16,7 +16,7 @@ const defaultCards = {
     { id: 2, number: 2, content: "亲一下对方的脸颊", difficulty: 1 },
     { id: 3, number: 3, content: "用最可爱的表情说'我爱你'", difficulty: 1 },
     { id: 4, number: 4, content: "说说对方最近做的暖心的事", difficulty: 1 },
-    { id: 5, number: 5, content: "夸夸对方今天的造型", difficulty: 1 }
+    { id: 5, number: 5, content: "夸夸对方今天的造型", difficulty: 1 },
   ]
 }
 // Rest of the component code remains the same...
