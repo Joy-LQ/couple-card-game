@@ -50,23 +50,51 @@ male: [
     { id: 43, number: 43, content: "将手指滑过她们的内裤腰带，靠近但不要触及她们最脆弱的区域。", difficulty: 2 }
     { id: 44, number: 44, content: "当你的爱人穿着内衣时，将你的手指滑入内衣下，敏感地抚摸他们的臀部", difficulty: 2 }
   ],
-  female: [
-    { id: 1, number: 1, content: "Blindfold your lover and kiss their neck, nibbl their earlobes from time to time", difficulty: 1 },
-    { id: 2, number: 2, content: "Blindfold your lover and suck their fingers greedly", difficulty: 1 },
-    { id: 3, number: 3, content: "Tie your lover's hands behind their back and kiss their upper body.", difficulty: 1 },
-    { id: 4, number: 4, content: "Tie a tie around your lover's neck, pull hard on it to draw them towards you, and kiss them passionately", difficulty: 1 },
-    { id: 5, number: 5, content: "Kiss your lover passionately, slipping your tongue into their mouth. Such and nibble their lips", difficulty: 1 },
-    { id: 6, number: 6, content: "Improvise the following erotic scenario: you work as the PA to a charismatic chief executive who is something of a Casanova, and you are really into him. He is willing, so seduce him.", difficulty: 2 },
-    { id: 7, number: 7, content: "Blindfold your lover and blow on their privates. Your are not allowed to touch them", difficulty: 2 },
-    { id: 8, number: 8, content: "Blindfold your lover and get undressed right next to them. Pleasure yourself close to their face, their mouth or their ear- the choice is yours", difficulty: 2 },
-    { id: 9, number: 9, content: "Take your lover's balls in your hands and massage them gently, intermittently giving them a slight tug", difficulty: 2 },
-    { id: 10, number: 10, content: "Perform a strip-tease for your lover and toss your clothes seductively at them.", difficulty: 2 },
-    { id: 11, number: 11, content: "With both of you clothed, simulate vigorous, athletic doggy-style sex with your partner bent over a tabel. Spice things up with domination, taking dirty and spanking him", difficulty: 3 },
-    { id: 12, number: 12, content: "Cover your lover's most sensitive parts in a spread or liquid that your like (such as jam or chocolate) and lick it off. Do this several times", difficulty: 3 },
-    { id: 13, number: 13, content: "Wash your lover's member sensually then lick and tease it with your tougue. Finish by taking them deep into your mouth while rubbing his balls", difficulty: 3 },
-    { id: 14, number: 14, content: "Suck your lover's balls and take their member in your hands for a sensual massage", difficulty: 3 },
-    { id: 15, number: 15, content: "Sitting on a chair, let your lover tie your hands behind your back. Your lover brings their pelvis towards your mouth. Lick and kiss whatever comes near enough.", difficulty: 3 }
-  ]
+female: [
+    { id: 1, number: 1, content: "蒙住爱人的眼睛，亲吻他们的脖子，时不时地轻咬他们的耳垂.", difficulty: 1 },
+    { id: 2, number: 2, content: "蒙住爱人的眼睛，贪婪地吮吸他们的手指.", difficulty: 1 },
+    { id: 3, number: 3, content: "将爱人的双手绑在背后并亲吻他们的上半身.", difficulty: 1 },
+    { id: 4, number: 4, content: "在爱人的脖子上系一条领带，用力拉动，将他们拉向你，然后热情地亲吻他们.", difficulty: 1 },
+    { id: 5, number: 5, content: "热情地亲吻你的爱人，将你的舌头伸进他们的嘴里。这样，轻咬他们的嘴唇.", difficulty: 1 },
+    { id: 6, number: 6, content: "即兴创作以下色情场景：你是一位魅力十足的首席执行官的私人助理，你真的很喜欢他。他愿意，那就勾引他吧。", difficulty: 2 },
+    { id: 7, number: 7, content: "蒙住你爱人的眼睛并对他们的私处吹气。你不准碰它们.", difficulty: 2 },
+    { id: 8, number: 8, content: "蒙住你爱人的眼睛，然后在他们旁边脱衣服。靠近他们的脸、嘴或耳朵取悦自己 - 选择权在你.", difficulty: 2 },
+    { id: 9, number: 9, content: "将爱人的睾丸握在手中，轻轻按摩，间断地轻轻拉扯它们.", difficulty: 2 },
+    { id: 10, number: 10, content: "为你的爱人表演脱衣舞，并诱惑地向他们扔你的衣服.", difficulty: 2 },
+    { id: 11, number: 11, content: "当你们俩都穿上衣服时，让你的伴侣俯身在桌子上，模拟充满活力、运动的后入式性爱。用打屁股来让事情变得更有趣.", difficulty: 3 },
+    { id: 12, number: 12, content: "用您喜欢的涂抹酱或液体（例如果酱或巧克力）覆盖您爱人最敏感的部位，然后将其舔掉。这样做几次.", difficulty: 3 },
+    { id: 13, number: 13, content: "性感地清洗你爱人的阴部，然后用你的舌头舔舐和挑逗它。最后将它们深深地放入嘴中，同时摩擦他的蛋蛋.", difficulty: 3 },
+    { id: 14, number: 14, content: "吸吮爱人的睾丸，并将他们的阴部握在手中，进行感性按摩", difficulty: 3 },
+    { id: 15, number: 15, content: "坐在椅子上，让爱人将你的双手绑在背后。你的爱人将他们的骨盆靠近你的嘴。舔并亲吻任何靠近的东西", difficulty: 3 }
+    { id: 16, number: 16, content: "给你的爱人戴上眼罩，用手指轻拍他们的私处根部，但这个阶段不要触摸.", difficulty: 2 }
+    { id: 17, number: 17, content: "使用一滴润滑剂，按摩、抚摸、挠痒痒、爱抚爱人胯部的每一个部位.", difficulty: 2 }
+    { id: 18, number: 18, content: "舔、咬、亲吻和吸吮爱人的乳头.", difficulty: 2 }
+    { id: 19, number: 19, content: "即兴创作以下色情场景：你是一个真正的魅魔。你的爱人很害羞。说服他和你一起睡。你需要有多放荡就有多放荡.", difficulty: 2 }
+    { id: 20, number: 20, content: "即兴创作以下色情场景：你是一名女警察。对你的爱人进行彻底的搜身，尽管他们有负罪感，但仍试图对你甜言蜜语.", difficulty: 2 }
+    { id: 21, number: 21, content: "一次一个地抚摸你爱人的（干净的）脚趾，就好像你在抚摸他的阴部一样.", difficulty: 2 }
+    { id: 22, number: 22, content: "当你的爱人穿着内衣时，当你爱抚他们的臀部时，热情地亲吻他们。紧紧握住，将指甲深深地扎进去，然后轻轻地拍打它们.", difficulty: 2 }
+    { id: 23, number: 23, content: "将爱人的手放在你的手中，并将其放在他们的私处。让他们慢慢地、感性地告诉你并向你展示他们真正喜欢什么，从而引导你.", difficulty: 2 }
+    { id: 24, number: 24, content: "站在你爱人的身后，隔着他们的裤子爱抚他们。然后将手短暂地伸进去，然后残酷地抽离.", difficulty: 2 }
+    { id: 25, number: 25, content: "即兴创作以下色情场景：你在药店，发现了一位性感的药剂师。你厚颜无耻地询问他们关于安全套的建议，并说服他你需要练习戴上一个.", difficulty: 2 }
+    { id: 26, number: 26, content: "握住爱人的手，用它们爱抚自己。如果你愿意的话，可以将你自己的手指和他们的手指放入你的体内.", difficulty: 2 }
+    { id: 27, number: 27, content: "蒙住爱人的眼睛，让他面对着你坐下，随着你选择的音乐起舞，将自己贴在他身上.", difficulty: 2 }
+    { id: 28, number: 28, content: "买一个你们都喜欢外观的性玩具。如果你不能立即做到这一点，请承诺稍后接受.", difficulty: 2 }
+    { id: 29, number: 29, content: "即兴创作以下色情场景：你是一个声名狼藉的富有的夫人。你对其中一位顾客产生热情。尽一切努力让这个赌客和你一起过夜.", difficulty: 2 }
+    { id: 30, number: 30, content: "当你吸吮爱人的乳头时并为他手淫。只要你的爱人允许你尽全力.", difficulty: 2 }
+    { id: 31, number: 31, content: "坐在椅子上，让爱人将你的双手绑在背后。你的爱人将他们的骨盆靠近你的嘴。舔并亲吻任何靠近的东西.", difficulty: 3 }
+    { id: 32, number: 32, content: "用你的嘴抚摸爱人臀部的曲线。如果你愿意的话，用你的舌头做这个10次。保持有趣并按照你的爱人的意愿进行.", difficulty: 3 }
+    { id: 33, number: 33, content: "你的爱人会给你一个教学，告诉你他们如何喜欢他们的阴部被爱抚，告诉你该怎么做。练习他们向你展示的每个动作.", difficulty: 3 }
+    { id: 34, number: 34, content: "将你的舌头从爱人的屁股上移到他们的蛋蛋上。 10次​​，不多不少.", difficulty: 3 }
+    { id: 35, number: 35, content: "当你爱抚他们的睾丸时，你的爱人会握住他们的阴茎并自慰。如果你愿意的话，也可以用你的舌头。但是，你不能碰你爱人的阴部.", difficulty: 3 }
+    { id: 36, number: 36, content: "你的舌头在你爱人的阴茎上上下滑动。时不时地停下来，特别注意使用舌尖.", difficulty: 3 }
+    { id: 37, number: 37, content: "戴上眼罩，从镜子中让你的身体与你爱人的身体平行，舔并吮吸他的下身。让他抱着你的头来引导你.", difficulty: 3 }
+    { id: 38, number: 38, content: "暴露你爱人的臀部，将他们放在你的膝盖上，让他们的臀部翘起。轻轻地抚摸他们的脸颊，然后粗暴地打他们的屁股。测试他们的疼痛阈值，一旦疼痛变得难以忍受就停止.", difficulty: 3 }
+    { id: 39, number: 39, content: "你的爱人拍摄你自慰的视频。使其尽可能具有吸引力.", difficulty: 3 }
+    { id: 40, number: 40, content: "在你们的乳房之间涂上润滑剂，以便你的爱人可以自慰.", difficulty: 3 }
+    { id: 41, number: 41, content: "将手放入内衣内自慰，看着爱人的眼睛.", difficulty: 3 }
+    { id: 42, number: 42, content: "即兴创作以下色情场景：你的爱人是一名患者，最近性生活过多，身体有些疼痛。作为医生，你检查他们的身体，触摸它比你需要的更多。你发现他们很有吸引力，所以滥用职权.", difficulty: 3 }
+    { id: 43, number: 43, content: "即兴创作以下色情场景：你是一名色情电影导演，正在面试寻找一个屏幕合作伙伴。向你的爱人询问你认为需要的问题。并务必要求进行现场测试.", difficulty: 3 }
+    { id: 44, number: 44, content: "通过沿着你的爱人的下身摩擦你赤裸、润滑的臀部来对你的爱人进行自慰。同时取悦自己.", difficulty: 3 }
 };
 
 // Rest of the component code remains the same...
